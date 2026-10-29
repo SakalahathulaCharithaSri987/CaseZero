@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101114">
+    <title>CASEZERO | Enter the Unknown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="landing-page">
+        <div class="top-label">
+            <span class="status-dot"></span>
+            CLASSIFIED INVESTIGATION SYSTEM
+        </div>
+
+        <section class="hero">
+            <p class="eyebrow">THE TRUTH IS NEVER OBVIOUS</p>
+
+            <h1>CASE<span>ZERO</span></h1>
+
+            <p class="tagline">
+                Every truth begins with a question.
+            </p>
+
+            <p class="description">
+                Every suspect has a story. Every clue hides a secret.
+                Can you uncover what really happened?
+            </p>
+
+            <button id="start-button" class="start-button">
+                START INVESTIGATION
+                <span aria-hidden="true">→</span>
+            </button>
+            <p id="game-message" class="game-message" hidden></p>
+            
+<section id="case-screen" class="case-screen" hidden>
+    <p class="case-label">CLASSIFIED CASE FILE · 001</p>
+    
+<div class="progress-panel">
+    <div class="progress-heading">
+        <span>INVESTIGATION PROGRESS</span>
+        <span id="progress-percentage">0%</span>
+    </div>
+
+    <div
+        class="progress-track"
+        role="progressbar"
+        aria-label="Investigation progress"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="0"
+        id="progress-track"
+    >
+        <div id="progress-fill" class="progress-fill"></div>
+    </div>
+
+    <p id="progress-message">
+        BEGIN YOUR INVESTIGATION
+    </p>
+</div>
+
+
+    <h2>THE MIDNIGHT DISAPPEARANCE</h2>
+
+    <p class="case-description">
+        At 11:47 PM, a renowned investigative journalist vanished
+        from a locked apartment. The door was locked from the inside.
+        Three people claim they saw nothing.
+    </p>
+
+    <div class="case-details">
+        <p><strong>LOCATION:</strong> Blackwood Apartments</p>
+        <p><strong>TIME:</strong> 11:47 PM</p>
+        <p><strong>STATUS:</strong> UNRESOLVED</p>
+    </div>
+
+    <p class="case-instruction">
+        Your investigation begins here. Examine every detail.
+        Trust no assumption.
+    </p>
+
+<button id="examine-button" class="start-button">
+    EXAMINE CRIME SCENE
+    <span aria-hidden="true">→</span>
+</button>
+
+<div id="evidence-area" class="evidence-area" hidden>
+    <p class="case-label">INITIAL EVIDENCE REPORT</p>
+
+    <h3>Three Details Stand Out</h3>
+
+    <ul>
+        <li>A broken wristwatch stopped at 11:47 PM.</li>
+        <li>A half-filled cup of coffee remains on the desk.</li>
+        <li>A muddy footprint is visible near the balcony door.</li>
+    </ul>
+
+    <p class="case-instruction">
+        These clues may matter later. Don't jump to conclusions.
+    </p>
+</div>
+
+<div id="suspects-area" class="suspects-area">
+    <p class="case-label">PERSONS OF INTEREST</p>
+
+    <h3>Three People. Three Stories.</h3>
+
+    
+<button class="suspect-card suspect-button" data-suspect="adrian">
+    <h4>01 — Adrian Cole</h4>
+    <p>THE BUSINESS PARTNER</p>
+    <p>Claims he left the apartment at 10:30 PM.</p>
+    <span class="suspect-action">INTERROGATE SUSPECT →</span>
+</button>
+
+<div id="adrian-interview" class="interview-panel" hidden>
+    <p class="case-label">INTERROGATION TRANSCRIPT · 001</p>
+
+    <h3>Adrian Cole — Statement</h3>
+
+    <p class="interview-dialogue">
+        "I left at 10:30 PM. We argued about the company's finances,
+        but that was nothing unusual. I had no reason to return."
+    </p>
+
+    <p class="interview-note">
+        OBSERVATION: Adrian admits to an argument but denies returning.
+    </p>
+</div>
+    
+<button class="suspect-card suspect-button" data-suspect="mira">
+    <h4>02 — Mira Hayes</h4>
+    <p>THE NEIGHBOR</p>
+    <p>Reports hearing an argument shortly before midnight.</p>
+    <span class="suspect-action">INTERROGATE SUSPECT →</span>
+</button>
+
+<div id="mira-interview" class="interview-panel" hidden>
+    <p class="case-label">INTERROGATION TRANSCRIPT · 002</p>
+
+    <h3>Mira Hayes — Statement</h3>
+
+    <p class="interview-dialogue">
+        "I heard shouting around 11:20 PM. I looked at my clock
+        because the argument was unusually loud. I didn't see
+        anyone leave the apartment."
+    </p>
+
+    <p class="interview-note">
+        OBSERVATION: Mira places the argument at 11:20 PM, later than
+        Adrian's claimed departure at 10:30 PM.
+    </p>
+</div>
+
+
+
+    
+<button class="suspect-card suspect-button" data-suspect="daniel">
+    <h4>03 — Daniel Cross</h4>
+    <p>THE JOURNALIST'S ASSISTANT</p>
+    <p>Says the journalist had been acting strangely all week.</p>
+    <span class="suspect-action">INTERROGATE SUSPECT →</span>
+</button>
+
+<div id="daniel-interview" class="interview-panel" hidden>
+    <p class="case-label">INTERROGATION TRANSCRIPT · 003</p>
+
+    <h3>Daniel Cross — Statement</h3>
+
+    <p class="interview-dialogue">
+        "He was worried about a document he planned to publish.
+        He told me someone was trying to silence him. I thought
+        he was being paranoid. I left the office before 9 PM."
+    </p>
+
+    <p class="interview-note">
+        OBSERVATION: Daniel mentions a document that neither Adrian
+        nor Mira has mentioned.
+    </p>
+</div>
+
+
+</div>
+
+</section>
+
+
+<section id="evidence-board" class="evidence-board">
+    <p class="case-label">INVESTIGATION DATABASE</p>
+
+    <h3>Evidence Board</h3>
+
+    <p class="board-description">
+        Every detail matters. Review the evidence collected
+        from the crime scene.
+    </p>
+
+    <div class="board-item">
+        <span class="evidence-number">E-001</span>
+        <div>
+            <h4>The Broken Watch</h4>
+            <p>Stopped at 11:47 PM — the reported disappearance time.</p>
+        </div>
+    </div>
+
+    <div class="board-item">
+        <span class="evidence-number">E-002</span>
+        <div>
+            <h4>The Coffee Cup</h4>
+            <p>A half-filled cup was left on the journalist's desk.</p>
+        </div>
+    </div>
+
+    <div class="board-item">
+        <span class="evidence-number">E-003</span>
+        <div>
+            <h4>The Muddy Footprint</h4>
+            <p>Found near the balcony door. Its owner is unknown.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="detective-notebook">
+    <p class="case-label">PRIVATE INVESTIGATION LOG</p>
+
+    <h3>Detective's Notebook</h3>
+
+    <p class="notebook-description">
+        Record your observations, connections, and theories.
+        Your notes stay in this browser session for now.
+    </p>
+
+    <label for="detective-notes">YOUR INVESTIGATION NOTES</label>
+
+    <textarea
+        id="detective-notes"
+        placeholder="Example: Why does Mira place the argument at 11:20 PM when Adrian claims he left at 10:30 PM?"
+        rows="6"
+    ></textarea>
+
+    <p id="notes-status" class="notes-status">
+        READY FOR YOUR OBSERVATIONS
+    </p>
+</section>
+
+<div class="solve-case-area">
+    <button id="solve-case-button" class="start-button">
+        SOLVE THE CASE
+        <span aria-hidden="true">→</span>
+    </button>
+</div>
+
+
+            <p class="bottom-note">
+                THINK CAREFULLY. TRUST NO ONE.
+            </p>
+        </section>
+
+        <footer class="footer">
+            <span>CASEZERO © 2026</span>
+            <span>YOUR INSTINCTS ARE YOUR ONLY WEAPON</span>
+        </footer>
+    </main>
+    <section id="case-solution" class="case-solution" hidden>
+    <p class="case-label">CLASSIFIED · FINAL REPORT</p>
+    <h2>THE FINAL DEDUCTION</h2>
+
+    <p class="case-description">
+        Every clue tells a story. Every statement hides a possibility.
+        Who do you believe is responsible for the disappearance?
+    </p>
+
+    <div class="suspect-choices">
+        <button class="suspect-choice" data-culprit="adrian">
+            ADRIAN COLE
+        </button>
+
+        <button class="suspect-choice" data-culprit="mira">
+            MIRA HAYES
+        </button>
+
+        <button class="suspect-choice" data-culprit="daniel">
+            DANIEL CROSS
+        </button>
+    </div>
+
+    <p id="deduction-message" class="deduction-message" hidden></p>
+    <button id="confirm-accusation-button" class="start-button" disabled>
+    CONFIRM ACCUSATION
+    <span aria-hidden="true">→</span>
+</button>
+<div id="case-outcome" class="case-outcome" hidden>
+    <p class="case-label">INVESTIGATION CLOSED</p>
+    <h3 id="outcome-title"></h3>
+    <p id="outcome-description"></p>
+    <p id="case-summary" class="case-summary" hidden></p>
+    <button id="play-again-button" class="start-button">
+    PLAY AGAIN
+    <span aria-hidden="true">↻</span>
+</button>
+</div>
+
+</section>
+    <script src="script.js"></script>
+</body>
+</html>
